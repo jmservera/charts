@@ -1,0 +1,24 @@
+apiVersion: v1
+entries:
+  vbserver:
+  - apiVersion: v2
+    appVersion: "3.12"
+    created: "2021-09-27T14:45:32.918996746Z"
+    description: A Helm chart for Kubernetes
+    digest: 2c2dd0b423d327661175469f7c4431abd49b6ae9d4dbf0569c51325a2971c97f
+    name: vbserver
+    type: application
+    urls:
+    - https://github.com/jmservera/charts/releases/download/vbserver-0.1.4/vbserver-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: "3.11"
+    created: "2021-09-27T13:57:41.2642695+02:00"
+    description: A Helm chart for Kubernetes
+    digest: c1e86df3877054e8ebce4b74c850443de34110d3f98c20ffdc8e98e108a12aa8
+    name: vbserver
+    type: application
+    urls:
+    - https://jmservera.github.com/charts/vbserver-0.1.1.tgz
+    version: 0.1.1
+generated: "2021-09-27T13:57:41.2611951+02:00"
