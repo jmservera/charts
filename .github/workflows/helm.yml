@@ -23,9 +23,19 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-     
-      - uses: paschdan/helm-chart-release-to-repo-action@v1.3.0
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: Helm Publish
+        # You may pin to the exact commit or the version.
+        # uses: J12934/helm-gh-pages-action@52bde3aaefdc278b4b1bf089f3c5d38599a2b31d
+        uses: J12934/helm-gh-pages-action@v2.0.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          charts_dir: docs
-          target_branch: main
+          # A personal access token needed to push your site after it has been built.
+          access-token: ${{ secrets.GITHUB_TOKEN }}
+          # The branch expected by GitHub to have the static files needed for your site.
+          deploy-branch: main
+          # The folder in which the helm charts are located
+          charts-folder: docs
