@@ -26,7 +26,6 @@ jobs:
      
       - uses: paschdan/helm-chart-release-to-repo-action@v1.3.0
         with:
-          access-token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           charts_dir: docs
           target_branch: main
-          charts_repo_url: https://jmservera.github.io/charts
