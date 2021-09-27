@@ -29,4 +29,5 @@ jobs:
           access-token: ${{ secrets.GITHUB_TOKEN }}
           charts_dir: docs
           target_branch: main
+          deploy-branch: main
           charts_repo_url: https://jmservera.github.io/charts
